@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<package>
+    <name>Rbncha_QuickClearCache</name>
+    <version>0.1.0</version>
+    <stability>stable</stability>
+    <license>OSL 3.0</license>
+    <channel>local</channel>
+    <extends/>
+    <summary>Conveniently Clear Magento Cache in one click</summary>
+    <description>This extension adds 3 buttons at the header of Admin Dashboard.</description>
+    <notes>Fully tested and stable</notes>
+    <authors><author><name>Rubin Shrestha</name><user>rbncha</user><email>rubin.sth@gmail.com</email></author></authors>
+    <date>2014-09-07</date>
+    <time>02:34:35</time>
+    <contents><target name="magelocal"><dir name="Rbncha"><dir name="QuickClearCache"><dir name="Helper"><file name="Data.php" hash="c222a96853b85b32c7591ba2682ae723"/></dir><dir name="controllers"><dir name="Adminhtml"><file name="CacheController.php" hash="442685749715fb4cdb0bda886d55b5b6"/></dir><file name=".DS_Store" hash="0047fe0bc161a58c6088a4e959de43a4"/></dir><dir name="etc"><file name="config.xml" hash="547c557e96fc0daa7595362af572d685"/><file name="system.xml" hash="8bd21055a8e808558f18655d35fb63dc"/></dir><file name=".DS_Store" hash="a5628829aa9a53b1c85a1558c24b59af"/></dir><file name=".DS_Store" hash="925cc8311fb17497a272ecf2d9c95652"/></dir></target><target name="magedesign"><dir name="adminhtml"><dir name="default"><dir name="default"><dir name="layout"><file name="rbncha_quickclearcache.xml" hash="bb76aacad806da618b98687e823c33bb"/></dir><dir name="template"><dir name="quickclearcache"><dir name="adminhtml"><file name="cache.phtml" hash="acc31000b94d0535563c21cbdd5cea03"/><file name=".DS_Store" hash="fd63f2e03097139d4185b4d42026d0fc"/></dir><file name=".DS_Store" hash="7889049ed629a206eadc1b9873435863"/></dir></dir></dir></dir></dir></target><target name="mageetc"><dir name="modules"><file name="Rbncha_QuickClearCache.xml" hash="0472e8a62a6afcfd90abfd2d027f5ee9"/></dir></target><target name="magelocale"><dir name="en_US"><file name="Rbncha_QuickClearCache.csv" hash="3620e0a64aea8818d9eb1ba68dd48803"/></dir></target></contents>
+    <compatible/>
+    <dependencies><required><php><min>5.1.0</min><max>6.0.0</max></php></required></dependencies>
+</package>

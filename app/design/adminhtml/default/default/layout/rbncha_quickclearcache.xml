@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ *
+ * @category   Rbncha
+ * @package    Rbncha_QuickClearCache
+ * @author     Rubin Shrestha <rubin.sth@gmail.com>
+ */
+-->
+
+<layout>
+    <default>
+        <reference name="content">
+    		<block type="adminhtml/template" after="-" before="-" name="quickclearcache.clear.cache" template="quickclearcache/adminhtml/cache.phtml"/>
+        </reference>
+    </default>
+</layout>

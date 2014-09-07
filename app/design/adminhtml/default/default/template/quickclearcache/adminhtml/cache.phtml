@@ -1,0 +1,38 @@
+<?php
+	$store = Mage::app()->getRequest()->getParam('store');
+	$qc1 = Mage::getStoreConfig('rbncha_quickclearcache_options/tab/qcc1', $store);
+	$qc2 = Mage::getStoreConfig('rbncha_quickclearcache_options/tab/qcc2', $store);
+	$qc3 = Mage::getStoreConfig('rbncha_quickclearcache_options/tab/qcc3', $store);
+?>
+
+<?php if($qc1 || $qc2 || $qc3):?>
+
+<div class="clear"></div>
+<div id="quickclearcache-div" style="text-align:right;display:inline-block; width:100%">
+	<?php if($qc1):?><button id="quickclearcache-1" class="scalable delete" title="<?php echo $this->__('FPC, Configuration, Layouts, Blocks HTML output, Translations, Collections Data, EAV types and attributes, Web Services Configuration & Web Services Configuration')?>"><span><?php echo $this->__('Clear All Cache')?></span></button><?php endif?>
+
+	<?php if($qc2):?><button id="quickclearcache-2" class="scalable delete"><span><?php echo $this->__('Flush Magento Cache')?></span></button><?php endif?>
+
+	<?php if($qc3):?><button id="quickclearcache-3" class="scalable delete"><span><?php echo $this->__('Flush Cache Storage')?></span></button><?php endif?>
+</div>
+<script type="text/javascript">
+    document.observe("dom:loaded", function() {
+
+        $('quickclearcache-1').observe('click', function(event) {
+        	location.href = '<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/cache/qcc1')?>';
+        });
+
+        $('quickclearcache-2').observe('click', function(event) {
+        	location.href = '<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/cache/qcc2')?>';
+        });
+
+        $('quickclearcache-3').observe('click', function(event) {
+        	location.href = '<?php echo Mage::helper('adminhtml')->getUrl('adminhtml/cache/qcc3')?>';
+        });
+
+        $$('.header-right')[0].up().insert($('quickclearcache-div'));
+    });
+
+</script>
+
+<?php endif?>

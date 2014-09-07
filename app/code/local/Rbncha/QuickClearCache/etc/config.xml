@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+
+<!--
+/**
+ *
+ * @category   Rbncha
+ * @package    Rbncha_QuickClearCache
+ * @author     Rubin Shrestha <rubin.sth@gmail.com>
+ */
+-->
+
+<config>
+    <modules>
+        <Rbncha_QuickClearCache>
+            <version>0.1.0</version>
+        </Rbncha_QuickClearCache>
+    </modules>
+    <global>
+	    <helpers>
+	        <rbncha_quickclearcache>
+	            <class>Rbncha_QuickClearCache_Helper</class>
+	        </rbncha_quickclearcache>
+	    </helpers>
+	</global>
+
+ 	<admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <rbncha_quickclearcache before="Mage_Adminhtml">Rbncha_QuickClearCache_Adminhtml</rbncha_quickclearcache>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+
+	<adminhtml>
+        <layout>
+            <updates>
+                <rbncha_quickclearcache>
+                    <file>rbncha_quickclearcache.xml</file>
+                </rbncha_quickclearcache>
+            </updates>
+        </layout>
+        <translate>
+            <modules>
+                <rbncha_quickclearcache>
+                    <files>
+                        <default>Rbncha_QuickClearCache.csv</default>
+                    </files>
+                </rbncha_quickclearcache>
+            </modules>
+        </translate>
+        <acl>
+            <resources>
+                <admin>
+                    <children>
+                        <system>
+                            <children>
+                                <config>
+                                    <children>
+                                        <rbncha_quickclearcache_options>
+                                            <title>Quick Clear Cache</title>
+                                        </rbncha_quickclearcache_options>
+                                    </children>
+                                </config>
+                            </children>
+                        </system>
+                    </children>
+                </admin>
+            </resources>
+        </acl>
+	 </adminhtml>
+</config>
