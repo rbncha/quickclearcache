@@ -1,4 +1,4 @@
-Quick Clear Cache
+Magento Quick Clear Cache
 ===============
 
 This fairly simple tiny extension to clear all types of core caches right from any admin page.
